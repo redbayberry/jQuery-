@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="test" onclick="alert('hh')">点击</div>
+  <ul id="proxy">
+    <li>文章</li>
+    <li>主页</li>
+    <li>官宣</li>
+    <li>简介</li>
+  </ul>
+  <script>
+    // document.getElementById('test').onclick = function () {
+    //   alert('hello')
+    // }
+
+    // var ElemUl = document.getElementById("proxy");
+    // var ElemLi = ElemUl.getElementsByTagName('li');
+    // for(var i = 0;i<ElemLi.length;i++){
+    //   ElemLi[i].onclick = function(){
+    //     alert("loadin...")
+    //   }
+    // }
+
+    var ElemUl = document.getElementById("proxy");
+    ElemUl.onclick = function(event){
+      var target = event.target;
+      if(target.nodeName.toLowerCase() === 'li'){
+        alert('loading')
+      }
+    }
+  </script>
+</body>
+
+</html>
